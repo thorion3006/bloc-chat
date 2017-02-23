@@ -1,0 +1,38 @@
+#chat-rooms {
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    font-family: 'Sansita', sans-serif;
+    color: aliceblue;
+    background-color: darkgray;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-image: url(/assets/images/backgrounds/sidebar.jpg);
+}
+
+#chat-rooms h1 {
+    font-size: 200%;
+}
+
+#chat-rooms ul li {
+    list-style-type: none;
+    margin-left: -2.5rem;
+    font-size: 100%;
+}
+
+@media (min-width: 300px, max-width:680px) {
+    #chat-rooms {width: 28%;}
+    
+    #chat-rooms h1 {font-size: 100%;}
+    
+    #chat-rooms ul li {font-size: 55%;}
+}
+
+@media (min-width: 1600px) {
+    #chat-rooms {width: 15%;}
+    
+    #chat-rooms h1 {font-size: 200%;}
+    
+    #chat-rooms ul li {font-size: 100%;}
+}
