@@ -12,11 +12,11 @@
             .state('home', {
                 url: "/",
                 templateUrl: "/templates/home.html",
-                controller: "HomeCtrl as home"
+                controller: "HomeCtrl"
             });
     }
     
     angular
-        .module('blocChat', ['ui.router', 'firebase'])
+        .module('blocChat', ['ui.router', 'ui.bootstrap', 'firebase'])
         .config(config);
 })();
