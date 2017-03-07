@@ -1,13 +1,13 @@
 (function() {
     function HomeCtrl($scope, Room, $uibModal) {
         $scope.rooms = Room.all;
-        $scope.open = function(){
-                $uibModal.open({
-                templateUrl: '/templates/new-room.html',
-                ariaLabelledBy: 'modal-header',
-                ariaDescribedBy: 'modal-body',
-                controller: 'ModalInstanceCtrl',
-                size: 'md'
+        $scope.openModal = function(){
+           var modalInstance = $uibModal.open({
+                    templateUrl: '/templates/newroom.html',
+                    size: 'md',
+                    controller: 'ModalInstanceCtrl',
+                    animation: true
+                    
                 });
             };
             return $scope.rooms;
