@@ -2,12 +2,11 @@
     function HomeCtrl($scope, Room, $uibModal) {
         $scope.rooms = Room.all;
         $scope.openModal = function(){
-           var modalInstance = $uibModal.open({
+           $uibModal.open({
                     templateUrl: '/templates/newroom.html',
                     size: 'md',
                     controller: 'ModalInstanceCtrl',
                     animation: true
-                    
                 });
             };
             return $scope.rooms;

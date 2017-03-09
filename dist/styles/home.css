@@ -21,6 +21,16 @@
     font-size: 100%;
 }
 
+#chat-rooms .btn {
+    background-color: aliceblue;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#chat-rooms .btn:hover {
+    background-color: #d0ffff;
+}
+
 @media (min-width: 300px, max-width:680px) {
     #chat-rooms {width: 28%;}
     

@@ -12,7 +12,7 @@
             .state('home', {
                 url: "/",
                 templateUrl: "/templates/home.html",
-                controller: "HomeCtrl"
+                controller: "HomeCtrl as home"
             });
     }
     
