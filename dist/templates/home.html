@@ -5,13 +5,31 @@
     </ul>
 </aside>
 
-<main id="chat">
-    <h2>{{activeRoom.$value}}</h2>
-    <section>
-        <div ng-repeat="message in messages">
-            <h4 class="username">{{message.username}}</h4>
-            <p class="content">{{message.content}}</p>
-            <p class="time-stamp">{{message.sentAt}}</p>
-        </div>
-    </section>
+<main id="chat" ng-class="{active: activeRoom.$value, notActive: null}">
+    <div class="active" ng-show="activeRoom.$value">
+        <h2>{{activeRoom.$value}}</h2>
+        <section>
+            <div class="chat" ng-repeat="message in messages">
+                <h4 class="username">{{message.username}}</h4>
+                <p class="content">{{message.content}}</p>
+                <p class="time-stamp">{{getTime(message.sentAt)}}</p>
+            </div>
+        </section>
+    </div>
+    <div class="notActive" ng-hide="activeRoom.$value">
+        <p>Please select a room to continue...</p>
+    </div>
 </main>
+
+<footer ng-show="activeRoom.$value">
+    <table>
+        <tr>
+            <form name="message">
+                <textarea placeholder="Write your message here..." ng-model="newMessage"></textarea>
+            </form>
+        </tr>
+        <tr>
+            <button class="btn" ng-click="send(newMessage)">Submit</button>
+        </tr>
+    </table>
+</footer>

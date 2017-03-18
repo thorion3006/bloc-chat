@@ -35,9 +35,9 @@
 
 #chat {
     position: fixed;
-    width: 100%;
+    width: 85%;
     height: 100%;
-    margin-left: 25%;
+    right: 0;
     padding: 1rem 5rem;
     font-family: 'Indie Flower', cursive;
     background-color: gainsboro;
@@ -48,19 +48,28 @@
     color: aliceblue;
 }
 
+#chat div.notActive {
+    margin-top: 20%;
+    font-size: 10rem;
+    text-align: center;
+}
+
 #chat h2 {
     font-family: 'Sansita', sans-serif;
     margin-bottom: 10rem;
 }
 
-#chat div{
+#chat div.chat{
     margin-bottom: 1rem;
     background-color: rgba(169,169,169,0.5);
+    border-radius: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
 }
 
 #chat div h4.username,
 #chat div p.content {
-    width: 80%;
+    width: 90%;
 }
 
 #chat div h4.username {
@@ -73,10 +82,33 @@
 }
 
 #chat div p.time-stamp {
-    text-align: center;
+    box-sizing: border-box;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 1rem;
     display: inline-block;
-    width: 5%;
+    width: auto;
     font-size: 1.8rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 15%;
+    width: 100%;
+    height: 10%;
+}
+
+footer textarea {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    width: 80%;
+}
+
+footer button {
+    height: 70%;
+    width: 5%;
+    margin-top: -3%;
 }
 
 @media (min-width: 300px, max-width:680px) {
