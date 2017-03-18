@@ -1,7 +1,17 @@
 <aside id="chat-rooms">
     <h1>Bloc Chat</h1> <button class="btn" type="button" ng-click="openModal()">New Room</button>
     <ul ng-repeat="room in rooms">
-        <li>{{room.$value}}</li>
+        <li ng-click="getActiveRoom(room)">{{room.$value}}</li>
     </ul>
 </aside>
 
+<main id="chat">
+    <h2>{{activeRoom.$value}}</h2>
+    <section>
+        <div ng-repeat="message in messages">
+            <h4 class="username">{{message.username}}</h4>
+            <p class="content">{{message.content}}</p>
+            <p class="time-stamp">{{message.sentAt}}</p>
+        </div>
+    </section>
+</main>
