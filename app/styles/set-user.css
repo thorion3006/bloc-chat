@@ -1,0 +1,10 @@
+.info {
+    padding: 1rem;
+    color: gray;
+    font-size: 1rem;
+}
+
+.warning {
+    display: inline-block;
+    color: red;
+}

@@ -1,9 +1,9 @@
 (function() {
     function ModalInstanceCtrl($scope, $uibModalInstance, Room) {
         $scope.rooms = Room.all;
-            $scope.create = function() {
-                $scope.rooms.$add($scope.newRoom);
-                $uibModalInstance.close();
+        $scope.create = function() {
+            $scope.rooms.$add($scope.newRoom);
+            $uibModalInstance.close();
         };
         $scope.cancel = function() {
             $uibModalInstance.dismiss('cancel');

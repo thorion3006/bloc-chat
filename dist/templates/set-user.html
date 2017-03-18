@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h2 class="modal-title" id="modal-title">Set a username</h2>
+</div>
+<form name="username">
+    <div class="modal-body">
+        <div class="form-group">
+            <p>This name will appear when you send messages</p>
+            <input type="text" ng-trim="false" ng-pattern="/^[a-zA-Z0-9]*$/" ng-model="newUser" required>
+            <p class="info">*Only alphanumerical characters allowed, avoid whitespaces and special characters</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <p class="warning" ng-show="username.$invalid">*Enter a valid username</p>
+        <button class="btn btn-warning" type="button" ng-show="username.$invalid">Set username</button>
+        <button class="btn btn-primary" type="button" ng-show="username.$valid" ng-click="create()">Set username</button>
+    </div>
+</form>
